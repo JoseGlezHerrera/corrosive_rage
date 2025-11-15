@@ -5,7 +5,7 @@ Framework modular de reconocimiento digital (OSINT) con CLI y GUI. Permite reali
 ![OSINT](https://img.shields.io/badge/Category-OSINT-red)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-## ⚠️ Uso legal obligatorio
+## ⚠️ Uso legal
 Esta herramienta es únicamente para auditorías autorizadas, prácticas educativas y análisis sobre sistemas propios. El uso sin permiso en sistemas ajenos puede ser ilegal.
 
 ## 📌 Funcionamiento
