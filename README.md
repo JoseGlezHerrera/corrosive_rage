@@ -1,10 +1,18 @@
 # 🕵️‍♂️ Corrosive's Rage
-Framework modular y extensible de reconocimiento digital **OSINT** con soporte para **CLI** y **GUI**, diseñado para realizar análisis de dominios, correos electrónicos, direcciones IP, nombres de usuario, empresas, números de teléfono, fugas de datos y metadatos de documentos. Además, permite **generar informes en PDF** a partir de los resultados.
+Framework modular y extensible de reconocimiento digital **OSINT** con soporte para **CLI** y **GUI**, diseñado para realizar análisis de dominios, correos electrónicos, direcciones IP, nombres de usuario, empresas, números de teléfono, leaks de datos y metadatos de documentos. Además, permite **generar informes en PDF** a partir de los resultados.
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![OSINT](https://img.shields.io/badge/Category-OSINT-red)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-![Status](https://img.shields.io/badge/Status-Active-success)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![OSINT](https://img.shields.io/badge/Category-OSINT-red?style=for-the-badge&logo=target)
+![License](https://img.shields.io/github/license/JoseGlezHerrera/corrosive_rage?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/JoseGlezHerrera/corrosive_rage?style=for-the-badge&logo=git)
+[![Latest Release](https://img.shields.io/github/v/release/JoseGlezHerrera/corrosive_rage?style=for-the-badge&logo=github)](https://github.com/JoseGlezHerrera/corrosive_rage/releases)
+![Issues](https://img.shields.io/github/issues/JoseGlezHerrera/corrosive_rage?style=for-the-badge&logo=github)
+
+> ⚡ Corrosive's Rage es un framework OSINT diseñado para el reconocimiento digital automatizado, con soporte modular tanto para CLI como para interfaz gráfica de escritorio.
+
+### 🖼 Vista previa de la interfaz:
+
+![Vista previa GUI](docs/img/corrosive_gui.png)
 
 ---
 
@@ -40,21 +48,10 @@ python -m venv .venv
 # Linux / Mac
 source .venv/bin/activate
 # Windows
+
 .venv\Scripts\activate
 
-pip install -r requirements.txt
-```
-
-También puedes instalarlo como paquete editable (recomendado para desarrollo):
-
-```bash
 pip install -e .
-```
-
-Para usar la exportación a PDF desde la GUI, instala además:
-
-```bash
-pip install reportlab
 ```
 
 ---
@@ -213,7 +210,7 @@ Actualmente, el proyecto incluye los siguientes módulos OSINT:
 | `email_recon`      | Validación de email, dominios asociados, MX, posibles leaks vía APIs externas.    |
 | `ip_recon`         | GeoIP, ASN, ISP, rangos de red, información de infraestructura.                   |
 | `username_recon`   | Búsqueda de usuario en distintas plataformas, presencia en redes, perfiles, etc.  |
-| `breach_recon`     | Comprobación de posibles fugas de datos asociadas al target (según APIs config.). |
+| `breach_recon`     | Comprobación de posibles leaks de datos asociadas al target (según APIs config.). |
 | `company_recon`    | Recopilación de información básica de empresas, presencia online y metadatos.     |
 | `dork_recon`       | Dorks automatizados en buscadores para localizar info expuesta relacionada.       |
 | `metadata_recon`   | Análisis de metadatos en PDFs, DOCX y otros documentos soportados.                |
@@ -250,6 +247,12 @@ corrosive-rage -m social_recon -t objetivo
 - 🔄 Mejora continua del manejo de errores y logs
 - 🔜 Integración más profunda con APIs como Shodan, HIBP y similares
 - 🔜 Tests automáticos para cada módulo
+
+---
+
+## 🧩 Última versión estable
+
+👉 https://github.com/JoseGlezHerrera/corrosive_rage/releases/latest
 
 ---
 
