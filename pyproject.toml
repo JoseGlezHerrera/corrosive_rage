@@ -1,0 +1,52 @@
+# pyproject.toml
+
+[project]
+name = "corrosive_rage"
+version = "0.1.0"
+authors = [
+  { name="Jose Gonzalez", email="jose.gonzalezh@protonmail.com" },
+]
+description = "A modular CLI tool for OSINT and reconnaissance."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "click",
+    "rich",
+    "pyyaml",
+    "jinja2",
+    "requests",
+    "shodan",
+    "python-whois",
+    "hibp",
+    "beautifulsoup4",
+    "lxml",
+    "PyPDF2",        
+    "python-docx",
+    "googlesearch-python",
+    "reportlab",
+    #Pendiente de que se actualice a la versión actual de Python "python-numverify",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[project.scripts]
+corrosive-rage = "corrosive_rage.cli:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP"]

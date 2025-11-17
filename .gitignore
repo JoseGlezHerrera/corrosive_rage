@@ -26,7 +26,16 @@ ENV/
 env.bak/
 venv.bak/
 
+#Carpetas residuales
+results/
+reports/
+.vscode/
+
 # mypy
 .mypy_cache/
 .dmypy.json
 dmypy.json
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
