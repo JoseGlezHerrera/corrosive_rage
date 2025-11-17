@@ -48,21 +48,10 @@ python -m venv .venv
 # Linux / Mac
 source .venv/bin/activate
 # Windows
+
 .venv\Scripts\activate
 
-pip install -r requirements.txt
-```
-
-También puedes instalarlo como paquete editable (recomendado para desarrollo):
-
-```bash
 pip install -e .
-```
-
-Para usar la exportación a PDF desde la GUI, instala además:
-
-```bash
-pip install reportlab
 ```
 
 ---
