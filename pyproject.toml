@@ -29,6 +29,7 @@ dependencies = [
     "python-docx",
     "googlesearch-python",
     "reportlab",
+    "ddgs",
     #Pendiente de que se actualice a la versión actual de Python "python-numverify",
 ]
 

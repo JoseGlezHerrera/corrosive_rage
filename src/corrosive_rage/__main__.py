@@ -34,16 +34,30 @@ SRC_ROOT = PROJECT_ROOT / "src"
 
 
 def load_config():
-    """Carga la configuración desde src/config/config.ini"""
+    """Carga la configuración desde config/config.ini en raíz o desde src/config/config.ini como fallback"""
     config = configparser.ConfigParser()
-    default_config_path = SRC_ROOT / "config" / "config.ini"
-    
-    loaded = config.read(default_config_path)
-    if not loaded:
-        print(f"[!] Warning: No se pudo cargar el archivo de configuración en {default_config_path}.")
+
+    # Ruta 1: config/config.ini en la raíz del proyecto
+    root_config_path = PROJECT_ROOT / "config" / "config.ini"
+
+    # Ruta 2: fallback tradicional en src/config/config.ini
+    src_config_path = SRC_ROOT / "config" / "config.ini"
+
+    # Elegir la ruta válida
+    if root_config_path.exists():
+        selected_path = root_config_path
+    else:
+        selected_path = src_config_path
+
+    # Intentar leer
+    loaded = config.read(selected_path)
+    if loaded:
+        print(f"[*] Configuración cargada desde: {selected_path}")
+    else:
+        print(f"[!] Warning: No se pudo cargar la configuración en {selected_path}")
         print("[*] Usando configuración vacía.")
-        config['APIs'] = {}
-    
+        config['APIs'] = {}  # Evita fallos si se intenta acceder a config['APIs']
+
     return config
 
 
